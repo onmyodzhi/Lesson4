@@ -1,6 +1,4 @@
-package MyList;
-
-import java.lang.annotation.Inherited;
+package Interface;
 
 public interface GBList<T> extends Iterable<T> {
     boolean add(T t);

@@ -1,5 +1,8 @@
 package MyList;
 
+import Interface.GBLinkedLists;
+import Interface.GBList;
+
 public class Main {
     public static void main(String[] args) {
         GBList<Number> gbList = new GBArrayList<>();
@@ -9,13 +12,15 @@ public class Main {
         System.out.println(gbList);
         gbList.update(0, 1.213213f);
         System.out.println(gbList.size());
-        gbList.remove(2);
-        System.out.println(gbList.size());
-        System.out.println(gbList);
-        gbList.update(0, 1.213213f);
-        System.out.println(gbList.get(2));
-        gbList.update(0, 1.213213f);
-        System.out.println(gbList);
-        gbList.get(12);
+
+        GBLinkedLists<Number> gbLinkedList = new GBLinkedList<>();
+        System.out.println(gbLinkedList);
+        gbLinkedList.addFirst(1);
+        System.out.println(gbLinkedList);
+        gbLinkedList.addFirst(2);
+        gbLinkedList.addFirst(3);
+        gbLinkedList.addLast(4);
+        System.out.println(gbLinkedList);
+        System.out.println(gbLinkedList.get(1) + " " + gbLinkedList.size());
     }
 }
